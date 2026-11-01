@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirCanvas18</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Gesture drawing studio</p>
+          <h1>AirCanvas18</h1>
+        </div>
+        <button id="toggleDraw" class="primary-btn">Start Drawing</button>
+      </header>
+
+      <div class="toolbar">
+        <div class="palette">
+          <button class="color-btn active" data-color="#ff4d4d" style="--swatch:#ff4d4d"></button>
+          <button class="color-btn" data-color="#3ecf8e" style="--swatch:#3ecf8e"></button>
+          <button class="color-btn" data-color="#4dabf7" style="--swatch:#4dabf7"></button>
+          <button class="color-btn" data-color="#ffd43b" style="--swatch:#ffd43b"></button>
+          <button class="color-btn" data-color="#ffffff" style="--swatch:#ffffff"></button>
+        </div>
+
+        <label class="brush-control">
+          Brush size
+          <input id="brushSize" type="range" min="2" max="20" value="6" />
+        </label>
+
+        <button id="clearCanvas" class="secondary-btn">Clear</button>
+      </div>
+
+      <div class="stage">
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="drawCanvas" width="1280" height="720"></canvas>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
